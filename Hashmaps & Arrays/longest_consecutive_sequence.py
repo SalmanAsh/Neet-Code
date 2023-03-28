@@ -1,0 +1,3 @@
+class Squence:
+    """Longest sequence"""
+    
