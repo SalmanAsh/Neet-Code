@@ -1,6 +1,4 @@
 cache = {}
-
-
 def nth(n):
     if (n in cache):
         return cache[n]
