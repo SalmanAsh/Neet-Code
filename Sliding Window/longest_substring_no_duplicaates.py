@@ -39,3 +39,27 @@ class Solution2:
 
 test = Solution2()
 print(test.sub("abcdabcdebb"))
+
+
+class Solution3:
+    def srf(self, s: str) -> int:
+        counts = []
+        l = 0
+        r = 1
+        while (l < len(s)-1):
+            if(s[l]!=s[r] and r == len(s) -1):
+                count = r - l + 1
+                counts.append(count)
+                l += 1
+                r = l + 1
+            elif(s[l]!=s[r]):
+                r += 1
+            elif(s[l]==s[r]):
+                count = r - l + 1
+                counts.append(count)
+                l += 1
+                r = l + 1
+        return max(counts)
+
+test = Solution3()
+print(test.srf("abcde"))
