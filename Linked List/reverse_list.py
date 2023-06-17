@@ -15,6 +15,12 @@ class Solution:
             current = nxt
         return prev
 
+
+
+
+
+
+
 #recursive
 class Solution2:
     def lnkdldt(self, head: ListNode) -> ListNode:
