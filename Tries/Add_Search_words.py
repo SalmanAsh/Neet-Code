@@ -18,7 +18,6 @@ class WordDictionary:
         cur.endOfWord = True
     
     def search(self, word: str) -> bool:
-        
         #Backtracking solution
         def dfs(j, root):
             cur = root
