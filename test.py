@@ -1,4 +1,4 @@
-nums = [1, 2, 3, 4, 5]
+num = -121
 
-for i, n in enumerate(nums):
-    print(i, n)
+nums = list(str(num).strip())
+print(len(nums))
