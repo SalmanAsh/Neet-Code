@@ -9,3 +9,19 @@ class Solution:
                 return s
             
         return "_"
+
+def solution(s):
+    seen = set()
+    duplicates = []
+    
+    for i in s:
+        if i in seen and i not in duplicates:
+            duplicates.append(i)
+        else:
+            seen.add(i)
+    
+    for i in s:
+        if i not in duplicates:
+            return i
+    
+    return "_"
