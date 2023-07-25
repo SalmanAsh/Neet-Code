@@ -21,4 +21,35 @@ public class RotateImage {
         }
         return matrix;
     }
+
+    public int[][] solution(int[][] a) {
+        int left = 0;
+        int right = a.length - 1;
+        
+        while (left < right){
+            for(int i = 0; i < right - left; i++){
+                int top = left;
+                int bottom = right;
+                
+                // Save top left value
+                int topLeft = a[top][left + i];
+                
+                // Move bottom left to top left
+                a[top][left + i] = a[bottom - i][left];
+                
+                // Move bottom right to bottom left
+                a[bottom - i][left] = a[bottom][right - i];
+                
+                // Move top right to bottom right
+                a[bottom][right - i] = a[top + i][right];
+                
+                // Move top left to top right
+                a[top + i][right] = topLeft;
+            }
+            
+            left++;
+            right--;
+        }
+        return a;
+    }
 }
