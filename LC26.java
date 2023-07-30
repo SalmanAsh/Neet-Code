@@ -1,5 +1,3 @@
-import java.util.HashSet;
-
 public class LC26 {
     public int removeDuplicates(int[] nums){
         if(nums.length == 0) return 0;
