@@ -4,9 +4,9 @@ def nth(n):
         return cache[n]
     if (n <= 1):
         return n
-    sum = nth(n-1) + nth(n-2)
-    cache[n] = sum
-    return sum
+    sum_ = nth(n-1) + nth(n-2)
+    cache[n] = sum_
+    return sum_
 
 
 for i in range(1000):
