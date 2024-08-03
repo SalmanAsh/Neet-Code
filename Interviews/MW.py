@@ -1,5 +1,5 @@
 class solution:
-    def task1(N, K):
+    def task1(self, N, K):
         if K == 0:
             return 0
         
@@ -14,7 +14,7 @@ class solution:
             return dp[K]
         return -1
     
-    def task2(A, B):
+    def task2(self, A, B):
         N = len(A)
 
         prefix_sum_A = [0] * (N + 1)
