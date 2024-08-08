@@ -12,4 +12,14 @@ class DailyTemperatures:
         return res
 
     def solution2(self, temperatures: List[int]) -> List[int]:
-        pass
+        res = [0] * len(temperatures)
+        stack = [] # pair: [temp, index]
+
+        for i, t in enumerate(temperatures):
+            while stack and stack[-1][0] < t:
+                stackT, stackI = stack.pop()
+                res[stackI] = i - stackI
+            
+            stack.append([t, i])
+        
+        return res
